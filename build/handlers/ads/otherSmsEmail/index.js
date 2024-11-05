@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.composer = void 0;
+const grammy_1 = require("grammy");
+const emailFacebook_1 = require("../../../handlers/ads/otherSmsEmail/emailFacebook");
+const emailDepop_1 = require("../../../handlers/ads/otherSmsEmail/emailDepop");
+const emailJofogas_1 = require("../../../handlers/ads/otherSmsEmail/emailJofogas");
+const smsJofogas_1 = require("../../../handlers/ads/otherSmsEmail/smsJofogas");
+const smsPaysend_1 = require("../../../handlers/ads/otherSmsEmail/smsPaysend");
+const emailEtsy_1 = require("../../../handlers/ads/otherSmsEmail/emailEtsy");
+exports.composer = new grammy_1.Composer();
+exports.composer.use(emailFacebook_1.composer);
+exports.composer.use(emailEtsy_1.composer);
+exports.composer.use(smsPaysend_1.composer);
+exports.composer.use(emailDepop_1.composer);
+exports.composer.use(emailJofogas_1.composer);
+exports.composer.use(smsJofogas_1.composer);

@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.composer = void 0;
+const grammy_1 = require("grammy");
+const command_1 = require("../../handlers/menu/command");
+const useful_1 = require("../../handlers/menu/useful");
+const rules_1 = require("../../handlers/menu/rules");
+const communication_1 = require("../../handlers/menu/communication");
+const chatList_1 = require("../../handlers/menu/chatList");
+const proStatus_1 = require("../../handlers/menu/proStatus");
+exports.composer = new grammy_1.Composer();
+exports.composer.use(command_1.composer);
+exports.composer.use(useful_1.composer);
+exports.composer.use(rules_1.composer);
+exports.composer.use(communication_1.composer);
+exports.composer.use(chatList_1.composer);
+exports.composer.use(proStatus_1.composer);

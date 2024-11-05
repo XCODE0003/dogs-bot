@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.composer = void 0;
+const grammy_1 = require("grammy");
+const preMenu_1 = require("../../../handlers/services/facebook/preMenu");
+const list_1 = require("../../../handlers/services/facebook/list");
+const menu_1 = require("../../../handlers/services/facebook/menu");
+exports.composer = new grammy_1.Composer();
+exports.composer.use(preMenu_1.composer);
+exports.composer.use(list_1.composer);
+exports.composer.use(menu_1.composer);

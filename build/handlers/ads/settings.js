@@ -1,0 +1,35 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.handler = exports.composer = void 0;
+const grammy_1 = require("grammy");
+const database_1 = require("../../database");
+exports.composer = new grammy_1.Composer();
+exports.composer.callbackQuery(/^settings ad (?<id>\d+)/gmi, handler);
+async function handler(ctx) {
+    const match = /^settings ad (?<id>\d+)/gmi.exec(ctx.callbackQuery.data);
+    const ad = await database_1.adsRepository.findOne({
+        relations: ['profile'],
+        where: {
+            id: Number(match.groups.id)
+        }
+    });
+    if (!ad)
+        return ctx.reply('ad undefined');
+    const keyb = [
+        [{ text: "Сменить цену", callback_data: `settings ad amount ${ad.id}` }],
+        [{ text: "Сменить название", callback_data: `settings ad title ${ad.id}` }],
+        [{ text: "Сменить описание", callback_data: `settings ad description ${ad.id}` }],
+        [{ text: "Сменить изображение", callback_data: `settings ad img ${ad.id}` }],
+    ];
+    if (ad.profile) {
+        keyb.push([{ text: "Сменить профиль", callback_data: `settings ad profile ${ad.id}` }]);
+    }
+    keyb.push([{ text: "❌ Удалить", callback_data: `ad delete ${ad.id}` }]);
+    keyb.push([{ text: "Назад", callback_data: `ad ${ad.id}` }]);
+    return ctx.editMessageReplyMarkup({
+        reply_markup: {
+            inline_keyboard: keyb
+        }
+    });
+}
+exports.handler = handler;

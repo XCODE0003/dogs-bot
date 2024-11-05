@@ -1,0 +1,45 @@
+[
+  {
+    "name": "leboncoin",
+    "profile": true,
+    "manualCreation": true,
+    "country": ["fr"]
+  },
+  {
+    "name": "depop",
+    "profile": false,
+    "manualCreation": false,
+    "country": ["de"]
+  },
+  {
+    "name": "wallapop",
+    "profile": false,
+    "manualCreation": false,
+    "country": ["es", "pt"]
+  },
+  {
+    "name": "willhaben",
+    "profile": false,
+    "manualCreation": false,
+    "country": ["at"]
+  },
+  {
+    "name": "vinted",
+    "profile": false,
+    "manualCreation": false,
+    "country": ["es","de","pt","at"]
+  },
+  {
+    "name": "facebook",
+    "profile": false,
+    "manualCreation": false,
+    "country": ["cz", "hu"]
+  }
+,
+  {
+    "name": "jofogas",
+    "profile": true,
+    "manualCreation": false,
+    "country": ["hu"]
+  }
+]

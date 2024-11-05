@@ -1,0 +1,36 @@
+{
+  "neutrinoApi":  {
+    "key": "miMOrWie5nuV6O7nAHF4Qp2EFvOVGyagfYevhBVLOPBpeQaE",
+    "userId": "tOntWitchLAt@proton.me"
+  },
+  "bot": {
+    "mainToken": "6971528236:AAE8XcUQIwqt0kxGUvmSNRHcCVqzqv1b4tY",
+    "notificationToken": "7380839481:AAGP-MpXZn8tCutxlSZIy3WKX73sYmgMGsI"
+  },
+  "chats": {
+    "vbiver": -1001897128297,
+    "accounting": -1001897128297,
+    "payments": -1002126968102,
+    "chat": -1001953941319,
+    "supports": -585482801,
+    "applications": -1002167012807 
+  },
+  "site": {
+    "url": "https://lovelypups.eu"
+  },
+  "database": {
+    "type": "mariadb",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "t#D82!mP)zK7qWnL",
+    "database": "bot",
+    "logging": false,
+    "synchronize": true
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  },
+  "superAdmin": [6369010256]
+}

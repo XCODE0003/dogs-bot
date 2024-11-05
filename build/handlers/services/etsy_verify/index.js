@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.composer = void 0;
+const grammy_1 = require("grammy");
+const menu_1 = require("../../../handlers/services/etsy_verify/menu");
+const manualCreationScene_1 = require("../../../handlers/services/etsy_verify/manualCreationScene");
+const copyAd_1 = require("../../../handlers/services/etsy_verify/copyAd");
+exports.composer = new grammy_1.Composer();
+exports.composer.use(menu_1.composer);
+exports.composer.use(manualCreationScene_1.composer);
+exports.composer.use(copyAd_1.composer);

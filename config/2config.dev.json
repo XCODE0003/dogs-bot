@@ -1,0 +1,33 @@
+{
+  "neutrinoApi":  {
+    "key": "miMOrWie5nuV6O7nAHF4Qp2EFvOVGyagfYevhBVLOPBpeQaE",
+    "userId": "tOntWitchLAt@proton.me"
+  },
+  "bot": {
+    "mainToken": "7150108643:AAGYH-eQKT992TjcQR5j5r1OvIRE4ie9V3A",
+    "notificationToken": "7150108643:AAGYH-eQKT992TjcQR5j5r1OvIRE4ie9V3A"
+  },
+  "chats": {
+    "vbiver": -777945006,
+    "accounting": -811065592,
+    "payments": -1001760023361,
+    "chat": -1001598099172,
+    "supports": -585482801,
+    "applications": -878575453
+  },
+  "database": {
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3307,
+    "username": "root",
+    "password": "WVEHyv4wCvO(p54f",
+    "database": "jfq4a_lonelypups",
+    "logging": false,
+    "synchronize": true
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  },
+  "superAdmin": [5696860799]
+}
